@@ -6,8 +6,8 @@ module.exports = {
    * @param {*} n2 number two
    *  
    */
-  sum: (n1, n2) => {
-    return n1 + n2;
+  sum: function (n1, n2) {
+    return (this.isNumber(n1, n2) ? n1 + n2 : this.msgError());
   },
     /**
    * Rest of two numbers
@@ -16,8 +16,8 @@ module.exports = {
    * @param {*} n2 number two
    * 
    */
-  rest: (n1, n2) => {
-    return n1 - n2;
+  rest: function (n1, n2) {
+    return (this.isNumber(n1, n2) ? n1 - n2 : this.msgError());
   },
     /**
    * Multiplication of two numbers
@@ -26,8 +26,8 @@ module.exports = {
    * @param {*} n2 number two
    *  
    */
-  multiplication: (n1, n2) => {
-    return n1 * n2;
+  multiplication: function (n1, n2) {
+    return (this.isNumber(n1, n2) ? n1 * n2 : this.msgError());
   },
     /**
    * Division of two numbers
@@ -36,7 +36,24 @@ module.exports = {
    * @param {*} n2 number two
    *  
    */
-  division: (n1, n2) => {
-    return n1 / n2;
+  division: function (n1, n2) {
+    return (this.isNumber(n1, n2) ? n1 / n2 : this.msgError());
+  },
+  /**
+   * Message call when a number is not valid
+   */
+  msgError: function () {
+    console.log('Un valor o ambos no son numericos')
+  },
+  /**
+   * Validate both number and return a boolean
+   * @param {*} n1 
+   * @param {*} n2 
+   */
+  isNumber: function (n1, n2) {
+    if(typeof n1 !== 'number' || typeof n2 !== 'number') {
+      return false;
+    };
+    return true
   }
 }
