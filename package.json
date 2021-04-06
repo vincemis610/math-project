@@ -1,0 +1,26 @@
+{
+  "name": "math-project",
+  "version": "1.0.0",
+  "description": "Simple Mathemathic Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincemis610/math-project.git"
+  },
+  "keywords": [
+    "math",
+    "sum",
+    "rest",
+    "multi",
+    "div"
+  ],
+  "author": "vincemis <vincemis610@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vincemis610/math-project/issues"
+  },
+  "homepage": "https://github.com/vincemis610/math-project#readme"
+}
